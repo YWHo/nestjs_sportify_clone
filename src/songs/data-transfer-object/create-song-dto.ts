@@ -13,8 +13,8 @@ export class CreateSongDTO {
 
   @IsNotEmpty()
   @IsArray()
-  @IsString()
-  readonly artists: string;
+  @IsString({ each: true })
+  readonly artists: string[];
 
   @IsNotEmpty()
   @IsDateString()

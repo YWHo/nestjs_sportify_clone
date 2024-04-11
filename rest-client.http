@@ -16,7 +16,7 @@ Content-Type: application/json
 
 {
   "title": "Last Christmas",
-  "artists": "Wham!",
+  "artists": ["Wham!"],
   "releasedDate" : "1984-12-03",
   "duration": "04:27"
 }
