@@ -7,7 +7,7 @@ GET http://localhost:3000
 ### SEND FETCH SONGS REQUEST
 GET http://localhost:3000/songs
 
-### Find SONGS REQUEST
+### Find a SONG REQUEST
 GET http://localhost:3000/songs/1
 
 ### Create a New SONG REQUEST
