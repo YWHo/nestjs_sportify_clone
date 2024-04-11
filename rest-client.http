@@ -1,3 +1,6 @@
+# Note: need to install the "REST Client" extension by "Huachao Mao"
+#       to the VS Code
+
 ### SEND FETCH root REQUEST
 GET http://localhost:3000
 
@@ -7,7 +10,7 @@ GET http://localhost:3000/songs
 ### Find SONGS REQUEST
 GET http://localhost:3000/songs/1
 
-### Create New SONGS REQUEST
+### Create a New SONG REQUEST
 POST http://localhost:3000/songs
 
 ### Update SONGS REQUEST
