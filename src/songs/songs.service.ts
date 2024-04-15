@@ -1,6 +1,10 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Scope } from '@nestjs/common';
 
-@Injectable()
+@Injectable({
+  // Setting scope to transient, will result in no caching,
+  // creating new instance of SongsController on every incoming request
+  scope: Scope.TRANSIENT,
+})
 export class SongsService {
   // local db
   // local array

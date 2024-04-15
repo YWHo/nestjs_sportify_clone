@@ -10,12 +10,17 @@ import {
   ParseIntPipe,
   Post,
   Put,
+  Scope,
 } from '@nestjs/common';
 import { SongsService } from './songs.service';
 import { CreateSongDTO } from './data-transfer-object/create-song-dto';
 import { Connection } from 'src/common/constants/connection';
 
-@Controller('songs')
+@Controller({
+  // This object is used together with "scope: Scope.TRANSIENT" in songs.service
+  path: 'songs',
+  scope: Scope.REQUEST,
+})
 export class SongsController {
   constructor(
     private songsService: SongsService,
@@ -24,7 +29,7 @@ export class SongsController {
   ) {
     console.log(
       `This is connection string:\n  `,
-      JSON.parse(JSON.stringify(this.connection)),
+      JSON.parse(JSON.stringify(this.connection.CONNECTION_STRING)),
     );
   }
 
